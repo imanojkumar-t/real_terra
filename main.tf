@@ -5,5 +5,9 @@ provider "aws" {
 resource "aws_instance" "example" {
   ami = ""
   instance_type: ""
+
+tags = {
+  name = "terraform-example"
+}
 }
 
