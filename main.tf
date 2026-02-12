@@ -5,6 +5,7 @@ provider "aws" {
 resource "aws_instance" "example" {
   ami = ""
   instance_type: ""
+  vpc_security_group_ids = [aws_security_group.instance.id]
   userdata = <<-EOF
              #!/bin/bash
              echo "Hello, World" > index.xhtml
